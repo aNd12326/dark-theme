@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from "./components/Nav";
+import useDarkMode from "./hook/useDarkMode";
 
 function App() {
+  useDarkMode();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav />
+      <div className="flex items-center justify-center min-h-screen dark:bg-black transition duration-500">
+        <h1 className="text-blue-600 dark:white">HOla dark mode</h1>
+      </div>
+    </>
   );
 }
 
